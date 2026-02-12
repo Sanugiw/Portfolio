@@ -1,66 +1,57 @@
-# Sanugi Dilara Wickramasinghe | Portfolio Website
+# 🌐 Sanugi Wickramasinghe – Portfolio Website
 
-This repository hosts the source code for my personal portfolio website, highlighting my background in **Biomedical Engineering** and my interests in **biosignal processing**, **medical instrumentation**, and **machine learning for healthcare**.
+This repository contains my personal academic and professional portfolio website, built using **HTML and CSS** and deployed using **GitHub Pages**.
 
-**Live site:** https://sanugiw.github.io/
-
----
-
-## Pages
-
-- **Home** (`index.html`) — Overview, focus areas, and quick access links  
-- **Projects** (`projects.html`) — Project summaries with purpose, approach, and value  
-- **Honors & Awards** (`honors.html`) — Academic and professional recognitions  
-- **Styles** (`styles.css`) — Blue academic theme styling
+🔗 **Live Website:** [https://sanugiw.github.io/](https://sanugiw.github.io/)
 
 ---
 
-## Features
+## 👩‍🔬 About
 
-- Multi‑page structure (Home / Projects / Honors)
-- Consistent blue academic theme with responsive layout
-- Clean project cards with tags for quick scanning
-- Contact section with clickable links (email, GitHub, LinkedIn)
+I am a third-year Biomedical Engineering undergraduate at the University of Moratuwa, with a focus on:
 
----
+* Biosignal Processing
+* Medical Instrumentation
+* Machine Learning for Healthcare
+* Human-Centered Biomedical System Design
 
-## Tech Stack
-
-- **HTML5**
-- **CSS3**
-- **GitHub Pages**
+This portfolio highlights my projects, academic background, technical skills, honors, and research interests.
 
 ---
 
-## Run Locally
+## 📂 Website Structure
 
-Option 1 (simple): open `index.html` in your browser.
-
-Option 2 (recommended): use a local server (so navigation and assets behave exactly like GitHub Pages).
-
-```bash
-# Python 3
-python -m http.server 8000
-```
-
-Then visit: `http://localhost:8000`
+* `index.html` → About & Contact
+* `projects.html` → Academic & Technical Projects
+* `honors.html` → Honors & Awards
+* `styles.css` → Global styling and theme
 
 ---
 
-## Deployment (GitHub Pages)
+## 🛠 Built With
 
-1. Push this repository to GitHub.
-2. Go to **Settings → Pages**
-3. Select:
-   - **Source:** Deploy from a branch
-   - **Branch:** `main`
-   - **Folder:** `/ (root)`
-4. Your site will be available at the GitHub Pages URL.
+* HTML5
+* CSS3
+* GitHub Pages
 
 ---
 
-## Contact
+## 🎯 Purpose
 
-- Email: sanugidwickramasinghe@gmail.com  
-- LinkedIn: https://linkedin.com/in/sanugiwickramasinghe  
-- GitHub: https://github.com/Sanugiw  
+This website serves as a centralized professional profile for:
+
+* Internship & research applications
+* Academic collaborations
+* Showcasing biomedical engineering projects
+* Professional networking
+
+---
+
+## 📬 Contact
+
+📧 [sanugidwickramasinghe@gmail.com](mailto:sanugidwickramasinghe@gmail.com)
+🔗 [https://github.com/Sanugiw](https://github.com/Sanugiw)
+💼 [https://linkedin.com/in/sanugiwickramasinghe](https://linkedin.com/in/sanugiwickramasinghe)
+
+---
+
