@@ -3,13 +3,7 @@
   --bg: #070d1a;
   --bg-alt: #0c1528;
   --card: #111c33;
-  /* Deep Blue Academic Theme */
-  --bg: #070d1a;
-  --bg-alt: #0c1528;
-  --card: #111c33;
 
-  --text: #e6edf7;
-  --text-dim: #9fb2d1;
   --text: #e6edf7;
   --text-dim: #9fb2d1;
 
@@ -19,14 +13,9 @@
 
   --border: #1f2b45;
 
-  --border: #1f2b45;
-
   --radius: 14px;
   --radius-sm: 8px;
-  --radius-sm: 8px;
 
-  --shadow-soft: 0 8px 20px rgba(0,0,0,.35);
-  --shadow: 0 15px 40px rgba(0,0,0,.6);
   --shadow-soft: 0 8px 20px rgba(0,0,0,.35);
   --shadow: 0 15px 40px rgba(0,0,0,.6);
 
@@ -45,7 +34,6 @@ body {
     var(--bg);
   color: var(--text);
   line-height: 1.7;
-  line-height: 1.7;
 }
 
 /* Links */
@@ -61,9 +49,6 @@ header h1 {
   font-size: clamp(2.6rem, 6vw, 3.6rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #3b82f6, #22d3ee);
-  -webkit-background-clip: text;
-  color: transparent;
   background: linear-gradient(135deg, #3b82f6, #22d3ee);
   -webkit-background-clip: text;
   color: transparent;
