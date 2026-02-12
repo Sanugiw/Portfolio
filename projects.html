@@ -1,122 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Projects | Sanugi</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Sanugi Dilara Wickramasinghe</title>
+  <meta name="description" content="Projects by Sanugi Dilara Wickramasinghe – biomedical devices, biosignal processing, and machine learning applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header>
   <h1>Projects</h1>
-  <p class="tagline">Selected Technical & Research Work</p>
+  <p class="tagline">
+    Selected work across biomedical devices, sensing, and applied ML—summarized with purpose, approach, and value.
+  </p>
+  <div class="header-cta">
+    <a class="btn" href="index.html">Back to Home</a>
+    <a class="btn" href="honors.html">Honors & Awards</a>
+    <a class="btn primary" href="#contact">Contact</a>
+  </div>
 </header>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="projects.html">Projects</a>
+  <a class="active" href="projects.html">Projects</a>
   <a href="honors.html">Honors</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <main>
   <section>
+    <h2>Featured projects</h2>
+
     <div class="grid">
-      <div class="card">
-        <a href="https://github.com/Sanugiw/PPG-Classifier" target="_blank">
-          <h3>PPG Atrial Fibrillation Classifier</h3>
-          <p class="desc">
-            Trained an LSTM-based deep learning model for atrial fibrillation detection using MATLAB for advanced PPG signal processing. Built a Streamlit web application for real-time prediction and visualization.
-          </p>
-          <div class="project-meta">
-            <p class="skills"><strong>Skills:</strong> Deep Learning, Signal Processing, LSTM Networks</p>
-            <p class="tools"><strong>Tools:</strong> MATLAB, Python, Streamlit, TensorFlow</p>
-          </div>
-        </a>
-      </div>
+      <article class="card">
+        <h3>X‑Hale – Portable Spirometer (Team Project)</h3>
+        <p class="desc">
+          Developed a portable spirometer that measures exhaled airflow velocity using an airflow velocity sensor, with on-device computation of key lung metrics and mobile app support for real-time monitoring and visualization.
+        </p>
+        <ul class="bullets">
+          <li>Focus: respiratory monitoring, measurement workflow, user-facing visualization</li>
+          <li>Value: portability + accessibility for preliminary assessment and tracking</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Instrumentation</span><span class="tag">Embedded</span><span class="tag">Mobile App</span>
+        </div>
+      </article>
 
-      <div class="card">
-        <a href="https://github.com/Sanugiw/Table-Mounted-Funduscope" target="_blank">
-          <h3>ML Integrated Table-Mounted Fundoscope</h3>
-          <p class="desc">
-            Designed a stationary retinal imaging device using SolidWorks that minimizes motion artifacts for clearer image capture. Implemented a CNN algorithm to predict diabetic retinopathy levels from the captured retinal images.
-          </p>
-          <div class="project-meta">
-            <p class="skills"><strong>Skills:</strong> CAD Design, Computer Vision, CNN, Medical Imaging</p>
-            <p class="tools"><strong>Tools:</strong> SolidWorks, Python, TensorFlow, OpenCV</p>
-          </div>
-        </a>
-      </div>
+      <article class="card">
+        <h3>ML‑Integrated Table‑Mounted Fundoscope (Team Project)</h3>
+        <p class="desc">
+          Designed a stationary retinal imaging setup to reduce motion artifacts and enable wireless image transfer for review, with ML-assisted classification to support diabetic retinopathy screening.
+        </p>
+        <ul class="bullets">
+          <li>Focus: stable imaging + ML inference + clinician-friendly UI workflow</li>
+          <li>Value: clearer images and faster preliminary triage for early detection</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Medical Imaging</span><span class="tag">Machine Learning</span><span class="tag">Web UI</span>
+        </div>
+      </article>
 
-      <div class="card">
-        <a href="https://github.com/Sanugiw/X-Hale" target="_blank">
-          <h3>X-Hale – Smart, Portable Spirometer</h3>
-          <p class="desc">
-            Developed a smart, portable spirometer using Arduino for real-time lung function monitoring. Created a mobile application in Flutter for data visualization and user interaction.
-          </p>
-          <div class="project-meta">
-            <p class="skills"><strong>Skills:</strong> IoT Development, Mobile App Development, Data Visualization</p>
-            <p class="tools"><strong>Tools:</strong> Arduino, Flutter, C++, Dart</p>
-          </div>
-        </a>
-      </div>
+      <article class="card">
+        <h3>Dual‑Mode Analog Thermometer</h3>
+        <p class="desc">
+          Built a precision temperature measurement device using analog design principles, supporting body and liquid temperature modes with stable multi-rail power and OLED readout.
+        </p>
+        <ul class="bullets">
+          <li>Focus: analog signal conditioning, sensor integration, mode switching</li>
+          <li>Value: low-cost precision design with robust measurement pipeline</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Analog Design</span><span class="tag">Sensors</span><span class="tag">Prototyping</span>
+        </div>
+      </article>
 
-      <div class="card">
-        <a href="https://github.com/Sanugiw/Dual-Mode-Thermometer" target="_blank">
-          <h3>Dual Mode Analog Thermometer</h3>
-          <p class="desc">
-            Developed a dual-mode thermometer using only analog components to measure two temperature ranges, with the enclosure designed in SolidWorks and circuitry simulated in LTspice. Programmed the real-time display using Arduino.
-          </p>
-          <div class="project-meta">
-            <p class="skills"><strong>Skills:</strong> Analog Circuit Design, CAD Design, Embedded Systems</p>
-            <p class="tools"><strong>Tools:</strong> SolidWorks, LTspice, Arduino, C++</p>
-          </div>
-        </a>
-      </div>
+      <article class="card">
+        <h3>MediBox – Smart Medicine Reminder System</h3>
+        <p class="desc">
+          Implemented a smart medicine reminder with environmental monitoring and configurable alerts to support safe storage and timely intake.
+        </p>
+        <ul class="bullets">
+          <li>Focus: sensing + alerts + remote configuration workflows</li>
+          <li>Value: promotes adherence while monitoring storage conditions</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">ESP32</span><span class="tag">Sensors</span><span class="tag">MQTT</span>
+        </div>
+      </article>
 
-      <div class="card">
-        <a href="https://github.com/Sanugiw/Trash-Classifier" target="_blank">
-          <h3>Smart Trash Classifier</h3>
-          <p class="desc">
-            Developed a Raspberry Pi-powered automatic trash classifier using TensorFlow and OpenCV to identify recyclables (plastic, paper, metal, glass) in real-time. Built a local web interface with Flask for live visualization and interaction.
-          </p>
-          <div class="project-meta">
-            <p class="skills"><strong>Skills:</strong> Computer Vision, Machine Learning, Web Development</p>
-            <p class="tools"><strong>Tools:</strong> Raspberry Pi, TensorFlow, OpenCV, Flask, Python</p>
-          </div>
-        </a>
-      </div>
+      <article class="card">
+        <h3>Smart Trash Classifier</h3>
+        <p class="desc">
+          Created an edge-AI waste sorting prototype using on-device vision inference and a simple web interface to classify recyclables in real time.
+        </p>
+        <ul class="bullets">
+          <li>Focus: lightweight CV pipeline + deployment on accessible hardware</li>
+          <li>Value: practical demo of edge inference + user-facing dashboard</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Edge AI</span><span class="tag">OpenCV</span><span class="tag">Flask</span>
+        </div>
+      </article>
 
-      <div class="card">
-        <a href="https://github.com/Sanugiw/Medi-Box" target="_blank">
-          <h3>MediBox – Smart Medicine Reminder System</h3>
-          <p class="desc">
-            Developed an ESP32-based smart medicine reminder system to monitor environmental conditions and ensure safe medication storage using Wokwi Simulator. Implemented intake reminders via a Node.js interface for real-time monitoring and notifications.
-          </p>
-          <div class="project-meta">
-            <p class="skills"><strong>Skills:</strong> IoT Development, Backend Development, Real-time Systems</p>
-            <p class="tools"><strong>Tools:</strong> ESP32, Wokwi Simulator, Node.js, JavaScript</p>
-          </div>
-        </a>
-      </div>
+      <article class="card">
+        <h3>UART Transceiver for FPGA Communication</h3>
+        <p class="desc">
+          Designed and verified a UART transceiver using HDL and a custom testbench, demonstrating real-time serial communication on FPGA hardware.
+        </p>
+        <ul class="bullets">
+          <li>Focus: RTL design, verification, and real-time data transfer</li>
+          <li>Value: solid foundation for embedded communication interfaces</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Verilog</span><span class="tag">FPGA</span><span class="tag">Verification</span>
+        </div>
+      </article>
 
-      <div class="card">
-        <a href="https://github.com/Sanugiw/Handheld-RFID-Reader" target="_blank">
-          <h3>Handheld HF RFID Reader</h3>
-          <p class="desc">
-            Developed a handheld HF RFID reader with real-time database integration for efficient tag tracking. Contributed to microcontroller programming at the register level using Microchip Studio.
-          </p>
-          <div class="project-meta">
-            <p class="skills"><strong>Skills:</strong> Embedded Systems, Low-level Programming, Database Integration</p>
-            <p class="tools"><strong>Tools:</strong> Microchip Studio, C, RFID Technology</p>
-          </div>
-        </a>
-      </div>
+      <article class="card">
+        <h3>Handheld HF RFID Reader (Ongoing)</h3>
+        <p class="desc">
+          Developing a handheld HF RFID reader with wireless data synchronization and mobile/web interfaces for tag reading, logging, and asset tracking workflows.
+        </p>
+        <ul class="bullets">
+          <li>Focus: embedded integration + system design + data flow to apps</li>
+          <li>Value: industry-aligned solution for reliable identification and tracking</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Embedded</span><span class="tag">RFID</span><span class="tag">Mobile/Web</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <a class="contact-box" href="mailto:sanugidwickramasinghe@gmail.com">
+        <div class="contact-icon">📧</div>
+        <div><strong>Email</strong><p>sanugidwickramasinghe@gmail.com</p></div>
+      </a>
+      <a class="contact-box" href="https://github.com/Sanugiw" target="_blank" rel="noopener">
+        <div class="contact-icon">🐙</div>
+        <div><strong>GitHub</strong><p>github.com/Sanugiw</p></div>
+      </a>
+      <a class="contact-box" href="https://linkedin.com/in/sanugiwickramasinghe" target="_blank" rel="noopener">
+        <div class="contact-icon">💼</div>
+        <div><strong>LinkedIn</strong><p>linkedin.com/in/sanugiwickramasinghe</p></div>
+      </a>
     </div>
   </section>
 </main>
 
 <footer>
-  © 2025 Sanugi Dilara Wickramasinghe
+  © 2026 Sanugi Dilara Wickramasinghe
 </footer>
 
 </body>
