@@ -36,17 +36,6 @@ This portfolio highlights my projects, academic background, technical skills, ho
 
 ---
 
-## 🎯 Purpose
-
-This website serves as a centralized professional profile for:
-
-* Internship & research applications
-* Academic collaborations
-* Showcasing biomedical engineering projects
-* Professional networking
-
----
-
 ## 📬 Contact
 
 📧 [sanugidwickramasinghe@gmail.com](mailto:sanugidwickramasinghe@gmail.com)
