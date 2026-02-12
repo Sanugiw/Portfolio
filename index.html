@@ -27,6 +27,7 @@
   </div>
 
   <div class="header-cta">
+    <a class="btn cv" href="assets/Sanugi_Dilara_Wickramasinghe_CV.pdf" download>⬇️ Download CV</a>
     <a class="btn primary" href="projects.html">View Projects</a>
     <a class="btn" href="honors.html">Honors & Awards</a>
     <a class="btn" href="#contact">Contact</a>
@@ -130,6 +131,14 @@
           <p>linkedin.com/in/sanugiwickramasinghe</p>
         </div>
       </a>
+
+      <a class="contact-box" href="https://sanugiw.medium.com/" target="_blank" rel="noopener">
+      <div class="contact-icon">✍️</div>
+      <div>
+        <strong>Medium</strong>
+        <p>sanugiw.medium.com</p>
+      </div>
+    </a>
     </div>
   </section>
 </main>
@@ -137,6 +146,44 @@
 <footer>
   © 2026 Sanugi Dilara Wickramasinghe • Built with GitHub Pages
 </footer>
+
+
+<script>
+  // Reveal-on-scroll (subtle)
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced) {
+    const els = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('reveal-in'));
+  }
+
+  // Projects filter (only runs if filters exist)
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('[data-cat]');
+  if (filterBtns.length && cards.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected','true');
+        const f = btn.dataset.filter;
+        cards.forEach(c => {
+          const cats = (c.dataset.cat || '');
+          c.style.display = (f === 'all' || cats.includes(f)) ? '' : 'none';
+        });
+      });
+    });
+  }
+</script>
 
 </body>
 </html>

@@ -236,3 +236,91 @@ footer {
   .tagline { font-size: 1rem; }
   nav { flex-wrap: wrap; }
 }
+
+
+/* -----------------------------
+   Subtle animations (v2)
+------------------------------ */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up { opacity: 0; transform: translateY(14px); }
+  .reveal-in { opacity: 1 !important; transform: translateY(0) !important; transition: opacity .75s ease, transform .75s ease; }
+  header h1 { animation: titlePop .9s ease both; }
+  header .tagline { animation: titlePop 1.05s ease both; }
+  header .pill { animation: titlePop 1.2s ease both; }
+  header .header-cta { animation: titlePop 1.35s ease both; }
+  header .tech-row { animation: titlePop 1.5s ease both; }
+  @keyframes titlePop {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .card { will-change: transform; }
+  .card:hover { transform: translateY(-8px) scale(1.01); }
+}
+
+/* Better focus states for accessibility */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid rgba(34,211,238,.9);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* Download CV button accent */
+.btn.cv {
+  border-color: rgba(34,211,238,.55);
+  background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(59,130,246,.18));
+}
+.btn.cv:hover { border-color: rgba(34,211,238,.85); }
+
+/* -----------------------------
+   Projects filters (v2)
+------------------------------ */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1.2rem;
+}
+.filter-btn {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: rgba(12,21,40,.55);
+  color: var(--text-dim);
+  padding: .45rem .85rem;
+  border-radius: 999px;
+  font-weight: 650;
+  font-size: .9rem;
+  transition: .25s ease;
+}
+.filter-btn:hover { transform: translateY(-2px); border-color: rgba(59,130,246,.55); color: #fff; }
+.filter-btn.active {
+  color: #fff;
+  border-color: rgba(59,130,246,.75);
+  background: linear-gradient(135deg, rgba(59,130,246,.9), rgba(34,211,238,.75));
+  box-shadow: 0 10px 24px rgba(59,130,246,.18);
+}
+.project-grid { margin-top: 1.6rem; }
+.project-meta {
+  margin-top: .65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+  color: var(--text-dim);
+  font-size: .9rem;
+}
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--text-dim);
+  font-size: .92rem;
+  margin-top: .5rem;
+}
+.kicker strong { color: #cfe1ff; font-weight: 750; }
+
+/* Slightly nicer bullets for project cards */
+.bullets.compact { margin-top: .7rem; }
+.bullets.compact li { margin: .28rem 0; }
+
+/* Make contact cards feel clickable */
+.contact-box { cursor: pointer; }
