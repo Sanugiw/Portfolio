@@ -323,22 +323,78 @@ a:focus-visible, button:focus-visible {
 .bullets.compact li { margin: .28rem 0; }
 
 /* ==============================
-   Clickable Project Cards FIX
+   Clickable Project Cards PRO
 ============================== */
 
 .project-grid > a.card {
   display: block;
+  position: relative;
   color: inherit !important;
   text-decoration: none !important;
+  overflow: hidden;
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 
+/* Keep text color normal */
 .project-grid > a.card * {
   color: inherit;
 }
 
+/* Hover glow */
 .project-grid > a.card:hover {
-  color: inherit !important;
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(59,130,246,.75);
+  box-shadow:
+    0 0 0 1px rgba(59,130,246,.25),
+    0 18px 45px rgba(59,130,246,.25);
 }
+
+/* GitHub corner badge */
+.project-grid > a.card::after {
+  content: "🔗";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 1.1rem;
+  opacity: .55;
+  transition: .3s ease;
+}
+
+.project-grid > a.card:hover::after {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* View repository hint */
+.project-grid > a.card::before {
+  content: "View Repository →";
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: .3s ease;
+}
+
+.project-grid > a.card:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slight blue gradient overlay on hover */
+.project-grid > a.card:hover {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(59,130,246,.08),
+      rgba(34,211,238,.05)
+    ),
+    rgba(17,28,51,.85);
+}
+
 
 
 }
