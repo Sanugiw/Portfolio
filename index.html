@@ -15,7 +15,7 @@
 <header>
   <h1>Sanugi Dilara Wickramasinghe</h1>
   <p class="tagline">
-    Research-Oriented Biomedical Engineering Undergraduate | Volunteer | Writer.
+    Research-Oriented Biomedical Engineering Undergraduate | Volunteer | Writer
   </p>
 
   <div class="pill" aria-label="Focus areas">
@@ -46,7 +46,9 @@
 </nav>
 
 <main>
-  <section id="about">
+
+  <!-- About Section -->
+  <section id="about" class="fade-up">
     <h2>About</h2>
     <div class="two-col">
       <div>
@@ -70,32 +72,47 @@
     </div>
   </section>
 
-  <section id="featured">
+  <!-- Featured Section -->
+  <section id="featured" class="fade-up">
     <h2>Featured work</h2>
-    <p class="subtle">A selection of projects that reflect my interests in biomedical devices, biosignals, and applied machine learning.</p>
+    <p class="subtle">
+      A selection of projects that reflect my interests in biomedical devices, biosignals, and applied machine learning.
+    </p>
 
     <div class="grid" style="margin-top:1.6rem;">
       <div class="card">
         <h3>Portable Spirometer with App Integration</h3>
-        <p class="desc">Built a portable spirometer concept with airflow-based measurement, on-device metric computation, and mobile app visualization for respiratory monitoring.</p>
+        <p class="desc">
+          Built a portable spirometer concept with airflow-based measurement, on-device metric computation, and mobile app visualization for respiratory monitoring.
+        </p>
         <div class="meta">
-          <span class="tag">Instrumentation</span><span class="tag">Mobile</span><span class="tag">Embedded</span>
+          <span class="tag">Instrumentation</span>
+          <span class="tag">Mobile</span>
+          <span class="tag">Embedded</span>
         </div>
       </div>
 
       <div class="card">
         <h3>ML-Assisted Retinal Imaging Platform</h3>
-        <p class="desc">Designed a stationary fundus imaging workflow and integrated ML-based classification to support diabetic retinopathy screening and review.</p>
+        <p class="desc">
+          Designed a stationary fundus imaging workflow and integrated ML-based classification to support diabetic retinopathy screening and review.
+        </p>
         <div class="meta">
-          <span class="tag">Machine Vision</span><span class="tag">ML</span><span class="tag">Web UI</span>
+          <span class="tag">Machine Vision</span>
+          <span class="tag">ML</span>
+          <span class="tag">Web UI</span>
         </div>
       </div>
 
       <div class="card">
         <h3>IoT Medicine Reminder & Storage Monitoring</h3>
-        <p class="desc">Created a smart medicine box with environmental sensing and configurable alerts for safer storage and improved adherence.</p>
+        <p class="desc">
+          Created a smart medicine box with environmental sensing and configurable alerts for safer storage and improved adherence.
+        </p>
         <div class="meta">
-          <span class="tag">ESP32</span><span class="tag">Sensors</span><span class="tag">Dashboard</span>
+          <span class="tag">ESP32</span>
+          <span class="tag">Sensors</span>
+          <span class="tag">Dashboard</span>
         </div>
       </div>
     </div>
@@ -105,9 +122,11 @@
     </div>
   </section>
 
-  <section id="contact">
+  <!-- Contact Section -->
+  <section id="contact" class="fade-up">
     <h2>Contact</h2>
     <div class="contact-grid">
+
       <a class="contact-box" href="mailto:sanugidwickramasinghe@gmail.com">
         <div class="contact-icon">📧</div>
         <div>
@@ -133,57 +152,46 @@
       </a>
 
       <a class="contact-box" href="https://sanugiw.medium.com/" target="_blank" rel="noopener">
-      <div class="contact-icon">✍️</div>
-      <div>
-        <strong>Medium</strong>
-        <p>sanugiw.medium.com</p>
-      </div>
-    </a>
+        <div class="contact-icon">✍️</div>
+        <div>
+          <strong>Medium</strong>
+          <p>sanugiw.medium.com</p>
+        </div>
+      </a>
+
     </div>
   </section>
+
 </main>
 
 <footer>
   © 2026 Sanugi Dilara Wickramasinghe • Built with GitHub Pages
 </footer>
 
-
 <script>
-  // Reveal-on-scroll (subtle)
+  // Reveal-on-scroll animation (clean version)
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   if (!prefersReduced) {
-    const els = document.querySelectorAll('.fade-up');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('reveal-in');
-          io.unobserve(e.target);
+    const elements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-in');
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.12 });
-    els.forEach(el => io.observe(el));
+
+    elements.forEach(el => observer.observe(el));
   } else {
     document.querySelectorAll('.fade-up').forEach(el => el.classList.add('reveal-in'));
   }
-
-  // Projects filter (only runs if filters exist)
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('[data-cat]');
-  if (filterBtns.length && cards.length) {
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected','true');
-        const f = btn.dataset.filter;
-        cards.forEach(c => {
-          const cats = (c.dataset.cat || '');
-          c.style.display = (f === 'all' || cats.includes(f)) ? '' : 'none';
-        });
-      });
-    });
-  }
 </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
