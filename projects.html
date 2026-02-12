@@ -168,3 +168,78 @@
   
 </div>
 </section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <a class="contact-box" href="mailto:sanugidwickramasinghe@gmail.com">
+      <div class="contact-icon">📧</div>
+      <div><strong>Email</strong><p>sanugidwickramasinghe@gmail.com</p></div>
+    </a>
+    <a class="contact-box" href="https://github.com/Sanugiw" target="_blank" rel="noopener">
+      <div class="contact-icon">🐙</div>
+      <div><strong>GitHub</strong><p>github.com/Sanugiw</p></div>
+    </a>
+    <a class="contact-box" href="https://linkedin.com/in/sanugiwickramasinghe" target="_blank" rel="noopener">
+      <div class="contact-icon">💼</div>
+      <div><strong>LinkedIn</strong><p>linkedin.com/in/sanugiwickramasinghe</p></div>
+    </a>
+    <a class="contact-box" href="https://sanugiw.medium.com/" target="_blank" rel="noopener">
+      <div class="contact-icon">✍️</div>
+      <div><strong>Medium</strong><p>sanugiw.medium.com</p></div>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Sanugi Dilara Wickramasinghe
+</footer>
+
+<script>
+  // Reveal-on-scroll (subtle) — prevents "blank page" if IO not supported
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const els = document.querySelectorAll('.fade-up');
+
+  function revealAll() {
+    els.forEach(el => el.classList.add('reveal-in'));
+  }
+
+  if (prefersReduced) {
+    revealAll();
+  } else if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
+  } else {
+    // Fallback: show everything if IntersectionObserver is unavailable
+    revealAll();
+  }
+
+  // Projects filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('[data-cat]');
+  if (filterBtns.length && cards.length) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected','true');
+        const f = btn.dataset.filter;
+        cards.forEach(c => {
+          const cats = (c.dataset.cat || '');
+          c.style.display = (f === 'all' || cats.includes(f)) ? '' : 'none';
+        });
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
