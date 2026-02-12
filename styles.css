@@ -322,18 +322,24 @@ a:focus-visible, button:focus-visible {
 .bullets.compact { margin-top: .7rem; }
 .bullets.compact li { margin: .28rem 0; }
 
-/* FIX: clickable project cards should behave like block cards */
+/* ==============================
+   Clickable Project Cards FIX
+============================== */
+
 .project-grid > a.card {
   display: block;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.project-grid > a.card * {
   color: inherit;
-  text-decoration: none;
 }
 
 .project-grid > a.card:hover {
-  color: inherit;
+  color: inherit !important;
 }
 
-.project-grid > a.card:hover {
-  color: inherit;
+
 }
 
