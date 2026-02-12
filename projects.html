@@ -30,178 +30,123 @@
 </nav>
 
 <main>
-  <section>
-    <h2>Featured projects</h2>
-    
-    <div class="filters" role="tablist" aria-label="Project filters">
-      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
-      <button class="filter-btn" data-filter="biomed" role="tab" aria-selected="false">Biomedical Devices</button>
-      <button class="filter-btn" data-filter="ml" role="tab" aria-selected="false">ML / Vision</button>
-      <button class="filter-btn" data-filter="embedded" role="tab" aria-selected="false">Embedded / IoT</button>
-      <button class="filter-btn" data-filter="hardware" role="tab" aria-selected="false">Hardware / FPGA</button>
-    </div>
+<section>
+<h2>Featured projects</h2>
 
-    <div class="grid project-grid" style="margin-top:1.6rem;">
-      <article class="card fade-up" data-cat="biomed embedded">
-        <h3>X‑Hale – Portable Spirometer <span class="tag" style="margin-left:.35rem;">Team</span></h3>
-        <p class="desc">
-          A portable spirometer that measures exhaled airflow velocity using an airflow velocity sensor, with on-device computation of key lung metrics and mobile app support for real-time monitoring and visualization.
-        </p>
-        <ul class="bullets compact">
-          <li>Designed for accessible, at-home respiratory monitoring workflows.</li>
-          <li>Emphasis on reliable measurement and clear user feedback via the app.</li>
-        </ul>
-        <div class="project-meta">
-          <span class="tag">Instrumentation</span><span class="tag">Embedded</span><span class="tag">Mobile App</span>
-        </div>
-      </article>
+<div class="filters" role="tablist" aria-label="Project filters">
+  <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+  <button class="filter-btn" data-filter="biomed" role="tab" aria-selected="false">Biomedical Devices</button>
+  <button class="filter-btn" data-filter="ml" role="tab" aria-selected="false">ML / Vision</button>
+  <button class="filter-btn" data-filter="embedded" role="tab" aria-selected="false">Embedded / IoT</button>
+  <button class="filter-btn" data-filter="hardware" role="tab" aria-selected="false">Hardware / FPGA</button>
+</div>
 
-      <article class="card fade-up" data-cat="biomed ml">
-        <h3>ML‑Integrated Table‑Mounted Fundoscope <span class="tag" style="margin-left:.35rem;">Team</span></h3>
-        <p class="desc">
-          Stationary retinal imaging setup designed to reduce motion artifacts and enable wireless image transfer for review, with ML-assisted classification to support diabetic retinopathy screening.
-        </p>
-        <ul class="bullets compact">
-          <li>Improved stability for clearer retinal images compared to handheld capture.</li>
-          <li>Clinician-oriented workflow: upload → prediction → review.</li>
-        </ul>
-        <div class="project-meta">
-          <span class="tag">Medical Imaging</span><span class="tag">Machine Learning</span><span class="tag">Web UI</span>
-        </div>
-      </article>
+<div class="grid project-grid" style="margin-top:1.6rem;">
 
-      <article class="card fade-up" data-cat="biomed hardware">
-        <h3>Dual‑Mode Analog Thermometer</h3>
-        <p class="desc">
-          Precision temperature measurement device built with analog components (thermistors, Wheatstone bridge, instrumentation amplifier) and a mode switch for body vs. liquid measurements.
-        </p>
-        <ul class="bullets compact">
-          <li>Analog signal conditioning + stable multi-rail power for robust readings.</li>
-          <li>OLED display handled by Arduino (display only) for clean visualization.</li>
-        </ul>
-        <div class="project-meta">
-          <span class="tag">Analog Design</span><span class="tag">Sensors</span><span class="tag">Prototyping</span>
-        </div>
-      </article>
+<!-- X-Hale -->
+<a href="https://github.com/Sanugiw/x-hale" target="_blank" rel="noopener" class="card fade-up" data-cat="biomed embedded">
+  <h3>X-Hale – Portable Spirometer <span class="tag" style="margin-left:.35rem;">Team</span></h3>
+  <p class="desc">
+    A portable spirometer that measures exhaled airflow velocity using an airflow velocity sensor, with on-device computation of key lung metrics and mobile app support for real-time monitoring and visualization.
+  </p>
+  <ul class="bullets compact">
+    <li>Designed for accessible, at-home respiratory monitoring workflows.</li>
+    <li>Emphasis on reliable measurement and clear user feedback via the app.</li>
+  </ul>
+  <div class="project-meta">
+    <span class="tag">Instrumentation</span><span class="tag">Embedded</span><span class="tag">Mobile App</span>
+  </div>
+</a>
 
-      <article class="card fade-up" data-cat="embedded biomed">
-        <h3>MediBox – Smart Medicine Reminder System</h3>
-        <p class="desc">
-          Medicine reminder system with environmental monitoring and configurable alerts to support safe storage and timely intake.
-        </p>
-        <ul class="bullets compact">
-          <li>Monitors environmental conditions and triggers alerts when needed.</li>
-          <li>Supports configurable reminders for daily adherence.</li>
-        </ul>
-        <div class="project-meta">
-          <span class="tag">ESP32</span><span class="tag">Sensors</span><span class="tag">MQTT</span>
-        </div>
-      </article>
+<!-- Fundoscope -->
+<a href="https://github.com/Sanugiw/ml-integrated-fundoscope" target="_blank" rel="noopener" class="card fade-up" data-cat="biomed ml">
+  <h3>ML-Integrated Table-Mounted Fundoscope <span class="tag" style="margin-left:.35rem;">Team</span></h3>
+  <p class="desc">
+    Stationary retinal imaging setup designed to reduce motion artifacts and enable wireless image transfer for review, with ML-assisted classification to support diabetic retinopathy screening.
+  </p>
+  <ul class="bullets compact">
+    <li>Improved stability for clearer retinal images compared to handheld capture.</li>
+    <li>Clinician-oriented workflow: upload → prediction → review.</li>
+  </ul>
+  <div class="project-meta">
+    <span class="tag">Medical Imaging</span><span class="tag">Machine Learning</span><span class="tag">Web UI</span>
+  </div>
+</a>
 
-      <article class="card fade-up" data-cat="ml embedded">
-        <h3>Smart Trash Classifier</h3>
-        <p class="desc">
-          Edge-AI waste sorting prototype using on-device vision inference and a simple web interface to classify recyclables in real time.
-        </p>
-        <ul class="bullets compact">
-          <li>Focus on efficient inference and responsive user feedback.</li>
-          <li>Demonstrates practical deployment on accessible hardware.</li>
-        </ul>
-        <div class="project-meta">
-          <span class="tag">Edge AI</span><span class="tag">OpenCV</span><span class="tag">Flask</span>
-        </div>
-      </article>
+<!-- Thermometer -->
+<a href="https://github.com/Sanugiw/dual-mode-thermometer" target="_blank" rel="noopener" class="card fade-up" data-cat="biomed hardware">
+  <h3>Dual-Mode Analog Thermometer</h3>
+  <p class="desc">
+    Precision temperature measurement device built with analog components and a mode switch for body vs. liquid measurements.
+  </p>
+  <ul class="bullets compact">
+    <li>Analog signal conditioning + stable multi-rail power for robust readings.</li>
+    <li>OLED display handled by Arduino (display only) for clean visualization.</li>
+  </ul>
+  <div class="project-meta">
+    <span class="tag">Analog Design</span><span class="tag">Sensors</span><span class="tag">Prototyping</span>
+  </div>
+</a>
 
-      <article class="card fade-up" data-cat="hardware">
-        <h3>UART Transceiver for FPGA Communication</h3>
-        <p class="desc">
-          UART transceiver designed and verified using HDL and a custom testbench, demonstrating real-time serial communication on FPGA hardware.
-        </p>
-        <ul class="bullets compact">
-          <li>RTL design with verification-first mindset using simulation.</li>
-          <li>Reusable building block for embedded communication interfaces.</li>
-        </ul>
-        <div class="project-meta">
-          <span class="tag">Verilog</span><span class="tag">FPGA</span><span class="tag">Verification</span>
-        </div>
-      </article>
+<!-- MediBox -->
+<a href="https://github.com/Sanugiw/medi-box" target="_blank" rel="noopener" class="card fade-up" data-cat="embedded biomed">
+  <h3>MediBox – Smart Medicine Reminder System</h3>
+  <p class="desc">
+    Medicine reminder system with environmental monitoring and configurable alerts to support safe storage and timely intake.
+  </p>
+  <ul class="bullets compact">
+    <li>Monitors environmental conditions and triggers alerts when needed.</li>
+    <li>Supports configurable reminders for daily adherence.</li>
+  </ul>
+  <div class="project-meta">
+    <span class="tag">ESP32</span><span class="tag">Sensors</span><span class="tag">MQTT</span>
+  </div>
+</a>
 
-      <article class="card fade-up" data-cat="embedded hardware">
-        <h3>Handheld HF RFID Reader</h3>
-        <p class="desc">
-          Handheld HF RFID reader with wireless data synchronization and mobile/web interfaces for tag reading, logging, and asset tracking workflows.
-        </p>
-        <ul class="bullets compact">
-          <li>End-to-end system thinking: device → connectivity → database logging.</li>
-          <li>Designed for real-world identification and tracking use cases.</li>
-        </ul>
-        <div class="project-meta">
-          <span class="tag">Embedded</span><span class="tag">RFID</span><span class="tag">Mobile/Web</span>
-        </div>
-      </article>
-    </div>
+<!-- Trash Classifier -->
+<a href="https://github.com/Sanugiw/trash-classifier" target="_blank" rel="noopener" class="card fade-up" data-cat="ml embedded">
+  <h3>Smart Trash Classifier</h3>
+  <p class="desc">
+    Edge-AI waste sorting prototype using on-device vision inference and a simple web interface to classify recyclables in real time.
+  </p>
+  <ul class="bullets compact">
+    <li>Focus on efficient inference and responsive user feedback.</li>
+    <li>Demonstrates practical deployment on accessible hardware.</li>
+  </ul>
+  <div class="project-meta">
+    <span class="tag">Edge AI</span><span class="tag">OpenCV</span><span class="tag">Flask</span>
+  </div>
+</a>
+
+<!-- UART -->
+<a href="https://github.com/Sanugiw/uart-fpga" target="_blank" rel="noopener" class="card fade-up" data-cat="hardware">
+  <h3>UART Transceiver for FPGA Communication</h3>
+  <p class="desc">
+    UART transceiver designed and verified using HDL and a custom testbench, demonstrating real-time serial communication on FPGA hardware.
+  </p>
+  <ul class="bullets compact">
+    <li>RTL design with verification-first mindset using simulation.</li>
+    <li>Reusable building block for embedded communication interfaces.</li>
+  </ul>
+  <div class="project-meta">
+    <span class="tag">Verilog</span><span class="tag">FPGA</span><span class="tag">Verification</span>
+  </div>
+</a>
+
+<!-- RFID -->
+<a href="https://github.com/Sanugiw/hf-rfid-reader" target="_blank" rel="noopener" class="card fade-up" data-cat="embedded hardware">
+  <h3>Handheld HF RFID Reader</h3>
+  <p class="desc">
+    Handheld HF RFID reader with wireless data synchronization and mobile/web interfaces for tag reading, logging, and asset tracking workflows.
+  </p>
+  <ul class="bullets compact">
+    <li>End-to-end system thinking: device → connectivity → database logging.</li>
+    <li>Designed for real-world identification and tracking use cases.</li>
+  </ul>
+  <div class="project-meta">
+    <span class="tag">Embedded</span><span class="tag">RFID</span><span class="tag">Mobile/Web</span>
+  </div>
+</a>
+
+</div>
 </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-grid">
-      <a class="contact-box" href="mailto:sanugidwickramasinghe@gmail.com">
-        <div class="contact-icon">📧</div>
-        <div><strong>Email</strong><p>sanugidwickramasinghe@gmail.com</p></div>
-      </a>
-      <a class="contact-box" href="https://github.com/Sanugiw" target="_blank" rel="noopener">
-        <div class="contact-icon">🐙</div>
-        <div><strong>GitHub</strong><p>github.com/Sanugiw</p></div>
-      </a>
-      <a class="contact-box" href="https://linkedin.com/in/sanugiwickramasinghe" target="_blank" rel="noopener">
-        <div class="contact-icon">💼</div>
-        <div><strong>LinkedIn</strong><p>linkedin.com/in/sanugiwickramasinghe</p></div>
-      </a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © 2026 Sanugi Dilara Wickramasinghe
-</footer>
-
-
-<script>
-  // Reveal-on-scroll (subtle)
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!prefersReduced) {
-    const els = document.querySelectorAll('.fade-up');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('reveal-in');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    els.forEach(el => io.observe(el));
-  } else {
-    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('reveal-in'));
-  }
-
-  // Projects filter (only runs if filters exist)
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('[data-cat]');
-  if (filterBtns.length && cards.length) {
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected','true');
-        const f = btn.dataset.filter;
-        cards.forEach(c => {
-          const cats = (c.dataset.cat || '');
-          c.style.display = (f === 'all' || cats.includes(f)) ? '' : 'none';
-        });
-      });
-    });
-  }
-</script>
-
-</body>
-</html>
