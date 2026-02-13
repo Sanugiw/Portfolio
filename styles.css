@@ -401,3 +401,20 @@ a:focus-visible, button:focus-visible{
   nav{ flex-wrap:wrap; }
   .grid{ grid-template-columns: 1fr; }
 }
+
+.contact-icon{
+  display:grid;
+  place-items:center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  flex: 0 0 auto;
+}
+
+.contact-icon svg{
+  width: 20px;
+  height: 20px;
+  stroke: rgba(234,240,251,.9);
+}
