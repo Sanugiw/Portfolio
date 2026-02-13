@@ -4,148 +4,340 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sanugi Dilara Wickramasinghe | Portfolio</title>
-  <meta name="description" content="Research-oriented Biomedical Engineering undergraduate focused on biosignal processing, medical instrumentation, and machine learning for healthcare | Volunteer | Writer" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --glass:rgba(255,255,255,.06);
+      --glass-strong:rgba(255,255,255,.10);
+      --border:rgba(255,255,255,.14);
+      --text:#f2f3f7;
+      --muted:#b8bfd2;
+      --muted2:#8d95a8;
+      --radius:22px;
+      --max:1100px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(255,255,255,.08), transparent 60%),
+        radial-gradient(700px 400px at 90% 0%, rgba(255,255,255,.05), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    .container{
+      width:min(var(--max), calc(100% - 40px));
+      margin:auto;
+      padding:28px 0 60px;
+    }
+
+    /* Topbar */
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 0;
+      backdrop-filter:blur(20px);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .brand strong{
+      font-weight:700;
+      letter-spacing:-.02em;
+      font-size:1.05rem;
+    }
+    .brand span{
+      display:block;
+      font-size:.85rem;
+      color:var(--muted2);
+    }
+
+    .nav a{
+      margin-left:12px;
+      padding:8px 14px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:.9rem;
+      border:1px solid transparent;
+      transition:.25s ease;
+    }
+    .nav a:hover,
+    .nav a.active{
+      background:var(--glass);
+      border-color:var(--border);
+      color:var(--text);
+    }
+
+    /* Glass Card */
+    .card{
+      border-radius:var(--radius);
+      padding:28px;
+      background:var(--glass);
+      backdrop-filter:blur(24px) saturate(140%);
+      -webkit-backdrop-filter:blur(24px) saturate(140%);
+      border:1px solid var(--border);
+      box-shadow:0 20px 50px rgba(0,0,0,.45);
+    }
+
+    /* Hero */
+    .hero h1{
+      margin:0;
+      font-size:clamp(2rem,3.5vw,2.7rem);
+      letter-spacing:-.03em;
+    }
+
+    .hero p{
+      margin-top:12px;
+      color:var(--muted);
+      max-width:60ch;
+    }
+
+    .pills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:18px;
+    }
+    .pill{
+      font-size:.85rem;
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+    }
+
+    .cta{
+      margin-top:20px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .btn{
+      padding:12px 16px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      font-weight:600;
+      transition:.25s ease;
+    }
+
+    .btn:hover{
+      background:rgba(255,255,255,.08);
+      transform:translateY(-2px);
+    }
+
+    .btn.primary{
+      background:#ffffff;
+      color:#0b0d12;
+      border-color:#ffffff;
+    }
+
+    .tech-row{
+      margin-top:20px;
+      opacity:.85;
+      filter:grayscale(100%) contrast(1.1);
+    }
+
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns:1.3fr .7fr;
+      gap:18px;
+      margin-top:22px;
+    }
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    h2{
+      margin-top:0;
+      font-size:1.1rem;
+      letter-spacing:-.02em;
+    }
+
+    .subtle{color:var(--muted)}
+
+    .bullets{
+      margin-top:12px;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    @media(max-width:600px){
+      .contact-grid{grid-template-columns:1fr}
+    }
+
+    .contact{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      transition:.25s ease;
+    }
+    .contact:hover{
+      background:rgba(255,255,255,.08);
+      transform:translateY(-2px);
+    }
+
+    .icon{
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+    }
+
+    footer{
+      margin-top:40px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.1);
+      color:var(--muted2);
+      font-size:.9rem;
+    }
+  </style>
 </head>
+
 <body>
+<div class="container">
 
-<header>
-  <h1>Sanugi Dilara Wickramasinghe</h1>
-  <p class="tagline">
-    Research-Oriented Biomedical Engineering Undergraduate | Volunteer | Writer
-  </p>
+  <div class="topbar">
+    <div class="brand">
+      <strong>Sanugi Dilara Wickramasinghe</strong>
+      <span>Research-Oriented Biomedical Engineering Undergraduate | Volunteer | Writer </span>
+    </div>
 
-  <div class="pill" aria-label="Focus areas">
-    <span>Biosignal Processing</span>
-    <span>Physiological Modeling</span>
-    <span>Machine Learning</span>
-    <span>Medical Devices</span>
-    <span>Human-Centered Design</span>
+    <div class="nav">
+      <a class="active" href="#">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="honors.html">Honors</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
 
-  <div class="header-cta">
-    <a class="btn cv" href="assets/Sanugi_Dilara_Wickramasinghe_CV.pdf" download>⬇️ Download CV</a>
-    <a class="btn primary" href="projects.html">Projects</a>
-    <a class="btn" href="honors.html">Honors & Awards</a>
-    <a class="btn" href="#contact">Contact</a>
-  </div>
+  <section class="card hero">
+    <h1>Research-Oriented Biomedical Engineer</h1>
+    <p>
+      I design end-to-end biomedical systems—from physiological signal acquisition
+      to intelligent models—focused on translating biosignals into accessible healthcare solutions.
+    </p>
 
-  <div class="tech-row">
-    <img src="https://skillicons.dev/icons?i=python,cpp,matlab,tensorflow,opencv,arduino,raspberrypi,nodejs,flutter,latex,vscode" alt="Tech stack icons" />
-  </div>
-</header>
+    <div class="pills">
+      <span class="pill">Biosignal Processing</span>
+      <span class="pill">Physiological Modeling</span>
+      <span class="pill">Machine Learning</span>
+      <span class="pill">Medical Devices</span>
+      <span class="pill">Human-Centered Design</span>
+    </div>
 
-<nav>
-  <a class="active" href="index.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="honors.html">Honors</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <div class="cta">
+      <a class="btn primary" href="projects.html">View Projects</a>
+      <a class="btn" href="assets/Sanugi_Dilara_Wickramasinghe_CV.pdf" download>Download CV</a>
+      <a class="btn" href="honors.html">Honors</a>
+    </div>
 
-<main>
-
-  <section id="about" class="fade-up">
-    <h2>About</h2>
-    <div class="two-col">
-      <div>
-        <p class="subtle">
-          I’m a third-year Biomedical Engineering undergraduate at the University of Moratuwa, 
-          focused on biosignal processing, medical instrumentation, and machine learning for healthcare.
-        </p>
-  
-        <p class="subtle" style="margin-top:.9rem;">
-          I build end-to-end biomedical systems — from sensor integration and signal conditioning 
-          to data analysis and intelligent models. My goal is to translate physiological data 
-          into meaningful, accessible healthcare solutions.
-        </p>
-  
-        <p class="subtle" style="margin-top:.9rem;">
-          I value clarity, structured problem-solving, and collaborative work. 
-          My interest in reading and writing strengthens how I communicate technical ideas.
-        </p>
-      </div>
-  
-      <div class="card">
-        <h3>Core Strengths</h3>
-        <ul class="bullets">
-          <li><strong>Biosignals:</strong> ECG/PPG analysis and signal workflows</li>
-          <li><strong>Medical Devices:</strong> Sensor interfacing and embedded prototyping</li>
-          <li><strong>Machine Learning:</strong> Classification and healthcare ML integration</li>
-          <li><strong>Systems Thinking:</strong> Bridging hardware, software, and users</li>
-        </ul>
-      </div>
+    <div class="tech-row">
+      <img src="https://skillicons.dev/icons?i=python,cpp,matlab,tensorflow,opencv,arduino,raspberrypi,nodejs,flutter,latex,vscode" />
     </div>
   </section>
 
+  <div class="grid">
+    <section class="card">
+      <h2>About</h2>
+      <p class="subtle">
+        Third-year Biomedical Engineering undergraduate at the University of Moratuwa.
+        Passionate about biosignal analysis, embedded medical systems, and healthcare ML integration.
+      </p>
+      <p class="subtle">
+        I value clarity, structured problem-solving, and communicating complex technical ideas effectively.
+      </p>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="fade-up">
+    <aside class="card">
+      <h2>Core Strengths</h2>
+      <ul class="bullets">
+        <li><strong>ECG & PPG</strong> workflows and signal pipelines</li>
+        <li><strong>Embedded Prototyping</strong> & sensor interfacing</li>
+        <li><strong>Healthcare ML</strong> classification & modeling</li>
+        <li><strong>Systems Thinking</strong> bridging hardware & software</li>
+      </ul>
+    </aside>
+  </div>
+
+  <section id="contact" class="card" style="margin-top:20px;">
     <h2>Contact</h2>
-    <div class="contact-grid">
 
-      <a class="contact-box" href="mailto:sanugidwickramasinghe@gmail.com">
-        <div class="contact-icon">📧</div>
+    <div class="contact-grid">
+      <a class="contact" href="mailto:sanugidwickramasinghe@gmail.com">
+        <div class="icon"><i data-lucide="mail"></i></div>
         <div>
           <strong>Email</strong>
-          <p>sanugidwickramasinghe@gmail.com</p>
+          <div class="subtle">sanugidwickramasinghe@gmail.com</div>
         </div>
       </a>
 
-      <a class="contact-box" href="https://github.com/Sanugiw" target="_blank" rel="noopener">
-        <div class="contact-icon">🐙</div>
+      <a class="contact" href="https://github.com/Sanugiw" target="_blank">
+        <div class="icon"><i data-lucide="github"></i></div>
         <div>
           <strong>GitHub</strong>
-          <p>github.com/Sanugiw</p>
+          <div class="subtle">github.com/Sanugiw</div>
         </div>
       </a>
 
-      <a class="contact-box" href="https://linkedin.com/in/sanugiwickramasinghe" target="_blank" rel="noopener">
-        <div class="contact-icon">💼</div>
+      <a class="contact" href="https://linkedin.com/in/sanugiwickramasinghe" target="_blank">
+        <div class="icon"><i data-lucide="linkedin"></i></div>
         <div>
           <strong>LinkedIn</strong>
-          <p>linkedin.com/in/sanugiwickramasinghe</p>
+          <div class="subtle">linkedin.com/in/sanugiwickramasinghe</div>
         </div>
       </a>
 
-      <a class="contact-box" href="https://sanugiw.medium.com/" target="_blank" rel="noopener">
-        <div class="contact-icon">✍️</div>
+      <a class="contact" href="https://sanugiw.medium.com/" target="_blank">
+        <div class="icon"><i data-lucide="pen-line"></i></div>
         <div>
           <strong>Medium</strong>
-          <p>sanugiw.medium.com</p>
+          <div class="subtle">sanugiw.medium.com</div>
         </div>
       </a>
-
     </div>
   </section>
 
-</main>
+  <footer>
+    © 2026 Sanugi Dilara Wickramasinghe • Built with GitHub Pages
+  </footer>
 
-<footer>
-  © 2026 Sanugi Dilara Wickramasinghe • Built with GitHub Pages
-</footer>
+</div>
 
 <script>
-  // Reveal-on-scroll animation (clean version)
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (!prefersReduced) {
-    const elements = document.querySelectorAll('.fade-up');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    elements.forEach(el => observer.observe(el));
-  } else {
-    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('reveal-in'));
-  }
+  lucide.createIcons();
 </script>
 
 </body>
