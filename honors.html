@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Honors & Awards | Sanugi Dilara Wickramasinghe</title>
   <meta name="description" content="Honors & awards of Sanugi Dilara Wickramasinghe" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
 <header>
   <h1>Honors & Awards</h1>
   <div class="header-cta">
-    <a class="btn cv" href="assets/Sanugi_Dilara_Wickramasinghe_CV.pdf" download>⬇️ Download CV</a>
+    <a class="btn cv" href="assets/Sanugi_Dilara_Wickramasinghe_CV.pdf" download>Download CV</a>
     <a class="btn" href="index.html">Back to Home</a>
     <a class="btn" href="projects.html">View Projects</a>
     <a class="btn primary" href="#contact">Contact</a>
@@ -30,35 +32,35 @@
 </nav>
 
 <main>
-  <section>
+  <section class="fade-up">
     <h2>Highlights</h2>
-    
+
     <div style="margin-top:1.6rem;">
-      <div class="honor-item">
+      <div class="honor-item fade-up">
         <h4>Dean’s List – Faculty of Engineering, University of Moratuwa</h4>
         <div class="when">Semesters 1–3</div>
         <p class="subtle">Recognized for consistent academic excellence across core engineering and biomedical modules.</p>
       </div>
 
-      <div class="honor-item">
+      <div class="honor-item fade-up">
         <h4>Best Performing Matching Panelist – AIESEC in UoM</h4>
         <div class="when">2023</div>
         <p class="subtle">Awarded for strong evaluation, communication, and decision-making in selection and matching workflows.</p>
       </div>
 
-      <div class="honor-item">
+      <div class="honor-item fade-up">
         <h4>Team Leader – Most Impactful iGV Project (AIESEC Colombo South)</h4>
         <div class="when">2023</div>
         <p class="subtle">Recognized for leading a project that achieved strong outcomes and engagement.</p>
       </div>
 
-      <div class="honor-item">
+      <div class="honor-item fade-up">
         <h4>GCE Advanced Level – Academic Achievement</h4>
         <div class="when">2022</div>
         <p class="subtle">Achieved 3 A’s in Combined Mathematics, Physics, and Chemistry.</p>
       </div>
 
-      <div class="honor-item">
+      <div class="honor-item fade-up">
         <h4>GCE Ordinary Level – Academic Achievement</h4>
         <div class="when">2019</div>
         <p class="subtle">Achieved 9 A’s.</p>
@@ -66,25 +68,30 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="fade-up">
     <h2>Contact</h2>
     <div class="contact-grid">
+
       <a class="contact-box" href="mailto:sanugidwickramasinghe@gmail.com">
-        <div class="contact-icon">📧</div>
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="mail"></i></div>
         <div><strong>Email</strong><p>sanugidwickramasinghe@gmail.com</p></div>
       </a>
+
       <a class="contact-box" href="https://github.com/Sanugiw" target="_blank" rel="noopener">
-        <div class="contact-icon">🐙</div>
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="github"></i></div>
         <div><strong>GitHub</strong><p>github.com/Sanugiw</p></div>
       </a>
+
       <a class="contact-box" href="https://linkedin.com/in/sanugiwickramasinghe" target="_blank" rel="noopener">
-        <div class="contact-icon">💼</div>
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="linkedin"></i></div>
         <div><strong>LinkedIn</strong><p>linkedin.com/in/sanugiwickramasinghe</p></div>
       </a>
+
       <a class="contact-box" href="https://sanugiw.medium.com/" target="_blank" rel="noopener">
-        <div class="contact-icon">✍️</div>
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="pen-line"></i></div>
         <div><strong>Medium</strong><p>sanugiw.medium.com</p></div>
       </a>
+
     </div>
   </section>
 </main>
@@ -93,12 +100,19 @@
   © 2026 Sanugi Dilara Wickramasinghe
 </footer>
 
-
+<script src="https://unpkg.com/lucide@latest"></script>
 <script>
-  // Reveal-on-scroll (subtle)
+  lucide.createIcons();
+
+  // Reveal-on-scroll — safe fallback so content never disappears
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!prefersReduced) {
-    const els = document.querySelectorAll('.fade-up');
+  const els = document.querySelectorAll('.fade-up');
+
+  function revealAll() { els.forEach(el => el.classList.add('reveal-in')); }
+
+  if (prefersReduced) {
+    revealAll();
+  } else if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) {
@@ -107,29 +121,13 @@
         }
       });
     }, { threshold: 0.12 });
+
     els.forEach(el => io.observe(el));
   } else {
-    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('reveal-in'));
-  }
-
-  // Projects filter (only runs if filters exist)
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('[data-cat]');
-  if (filterBtns.length && cards.length) {
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected','true');
-        const f = btn.dataset.filter;
-        cards.forEach(c => {
-          const cats = (c.dataset.cat || '');
-          c.style.display = (f === 'all' || cats.includes(f)) ? '' : 'none';
-        });
-      });
-    });
+    revealAll();
   }
 </script>
 
 </body>
 </html>
+
