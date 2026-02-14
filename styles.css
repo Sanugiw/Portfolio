@@ -255,6 +255,15 @@ section h2{
 .bullets li{ margin: .28rem 0; }
 .bullets.compact{ margin-top: .65rem; }
 
+/* ===== Mini headings inside cards (Technical / Soft Skills) ===== */
+.mini-title{
+  font-size: .95rem;
+  font-weight: 750;
+  color: #eaf0fb;
+  margin-bottom: .45rem;
+  letter-spacing: -0.01em;
+}
+
 /* ===== Honors ===== */
 .honor-item{
   border-radius: var(--radius-sm);
@@ -298,11 +307,34 @@ section h2{
   border-color: rgba(34,211,238,.35);
   box-shadow: var(--shadow);
 }
-.contact-icon{ font-size: 1.45rem; }
-.contact-box strong{ display:block; color:#eaf0fb; }
+
+/* icon container (Lucide) */
+.contact-icon{
+  display:grid;
+  place-items:center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  flex: 0 0 auto;
+}
+.contact-icon svg{
+  width: 20px;
+  height: 20px;
+  stroke: rgba(234,240,251,.9);
+}
+
+/* smaller text inside contact boxes */
+.contact-box strong{
+  display:block;
+  color:#eaf0fb;
+  font-size: .95rem;
+}
 .contact-box p{
   color: var(--text-dim);
-  font-size: .95rem;
+  font-size: .88rem;
+  line-height: 1.35;
   word-break: break-word;
 }
 
@@ -400,21 +432,4 @@ a:focus-visible, button:focus-visible{
   .tagline{ font-size: 1rem; }
   nav{ flex-wrap:wrap; }
   .grid{ grid-template-columns: 1fr; }
-}
-
-.contact-icon{
-  display:grid;
-  place-items:center;
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.03);
-  flex: 0 0 auto;
-}
-
-.contact-icon svg{
-  width: 20px;
-  height: 20px;
-  stroke: rgba(234,240,251,.9);
 }
