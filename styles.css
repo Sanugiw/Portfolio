@@ -221,6 +221,25 @@ section h2{
   box-shadow: var(--shadow);
   background: rgba(255,255,255,.04);
 }
+
+/* ===== Premium subtle top glow for cards ===== */
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:2px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  background: linear-gradient(90deg, rgba(59,130,246,.6), rgba(34,211,238,.6));
+  opacity:.35;
+  transition: opacity .25s ease;
+}
+.card:hover::before{
+  opacity:.85;
+}
+
 .card h3{
   color: #eaf0fb;
   font-size: 1.12rem;
