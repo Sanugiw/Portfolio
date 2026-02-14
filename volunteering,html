@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteering | Sanugi Dilara Wickramasinghe</title>
+  <meta name="description" content="Volunteering and social engagements of Sanugi Dilara Wickramasinghe." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Volunteering</h1>
+  <p class="tagline">
+    Community roles across IEEE and student organizations — external relations, editorial work, and event coordination.
+  </p>
+
+  <div class="header-cta">
+    <a class="btn cv" href="assets/Sanugi_Dilara_Wickramasinghe_CV.pdf" download>Download CV</a>
+    <a class="btn" href="index.html">Back to Home</a>
+    <a class="btn" href="projects.html">Projects</a>
+    <a class="btn" href="honors.html">Honors & Awards</a>
+    <a class="btn primary" href="#contact">Contact</a>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="honors.html">Honors</a>
+  <a class="active" href="volunteering.html">Volunteering</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+  <section class="fade-up">
+    <h2>Social Engagements</h2>
+    <p class="subtle">
+      Highlights of my volunteering, leadership, and committee roles.
+    </p>
+
+    <div class="grid" style="margin-top:1.6rem;">
+
+      <!-- IEEE EMBS UoM -->
+      <div class="card fade-up">
+        <h3>IEEE EMBS UoM</h3>
+        <p class="desc">January 2024 – Present</p>
+        <ul class="bullets compact">
+          <li><strong>Head of External Relations</strong> — Term 24.25</li>
+          <li><strong>Delegates & PR Committee Lead</strong> — Brainstorm 2025</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">External Relations</span>
+          <span class="tag">PR</span>
+          <span class="tag">Leadership</span>
+        </div>
+      </div>
+
+      <!-- AIESEC in UoM -->
+      <div class="card fade-up">
+        <h3>AIESEC in UoM</h3>
+        <p class="desc">March 2023 – July 2024</p>
+        <ul class="bullets compact">
+          <li><strong>iGV Matching Panelist</strong> — Mar 2023 – Jul 2023</li>
+          <li><strong>iGV Team Leader</strong> — Project Global Classroom 1.2</li>
+          <li><strong>Organizing Committee Member (Delegates)</strong> — Overhaul 2.0</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Team Leadership</span>
+          <span class="tag">Evaluation</span>
+          <span class="tag">Event Support</span>
+        </div>
+      </div>
+
+      <!-- Electronic Club -->
+      <div class="card fade-up">
+        <h3>Electronic Club</h3>
+        <p class="desc">January 2024 – Present</p>
+        <ul class="bullets compact">
+          <li><strong>External Relations Committee Member</strong> — Term 24.25</li>
+          <li><strong>Company Coordinator & Delegates Committee Member</strong> — SLRC 2024</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Industry Liaison</span>
+          <span class="tag">Coordination</span>
+          <span class="tag">Operations</span>
+        </div>
+      </div>
+
+      <!-- IEEE SB UoM -->
+      <div class="card fade-up">
+        <h3>IEEE Student Branch UoM</h3>
+        <p class="desc">November 2023 – Present</p>
+        <ul class="bullets compact">
+          <li><strong>Editorial Committee Member</strong> — Term 24.25</li>
+          <li><strong>Organizing Committee Member</strong> — MERCon 2023, 2024</li>
+          <li><strong>Organizing Committee Member</strong> — Mora Foresight 2.0</li>
+          <li><strong>Organizing Committee Member</strong> — Rise Up Mora 2024, 2025</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Editorial</span>
+          <span class="tag">Events</span>
+          <span class="tag">Communication</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="fade-up">
+    <h2>What I Contribute</h2>
+    <div class="two-col">
+      <div class="card fade-up">
+        <h3>Editorial & Communication</h3>
+        <p class="desc">
+          Writing and refining content for clarity, structure, and impact—supporting publications, PR, and
+          event communication.
+        </p>
+        <div class="meta">
+          <span class="tag">Writing</span>
+          <span class="tag">Editing</span>
+          <span class="tag">PR</span>
+        </div>
+      </div>
+
+      <div class="card fade-up">
+        <h3>Coordination & Leadership</h3>
+        <p class="desc">
+          Team coordination, external relations, and delegate/event workflows—helping deliver student initiatives smoothly.
+        </p>
+        <div class="meta">
+          <span class="tag">Leadership</span>
+          <span class="tag">External Relations</span>
+          <span class="tag">Operations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-up">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+
+      <a class="contact-box" href="mailto:sanugidwickramasinghe@gmail.com">
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="mail"></i></div>
+        <div>
+          <strong>Email</strong>
+          <p>sanugidwickramasinghe@gmail.com</p>
+        </div>
+      </a>
+
+      <a class="contact-box" href="https://github.com/Sanugiw" target="_blank" rel="noopener">
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="github"></i></div>
+        <div>
+          <strong>GitHub</strong>
+          <p>github.com/Sanugiw</p>
+        </div>
+      </a>
+
+      <a class="contact-box" href="https://linkedin.com/in/sanugiwickramasinghe" target="_blank" rel="noopener">
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="linkedin"></i></div>
+        <div>
+          <strong>LinkedIn</strong>
+          <p>linkedin.com/in/sanugiwickramasinghe</p>
+        </div>
+      </a>
+
+      <a class="contact-box" href="https://sanugiw.medium.com/" target="_blank" rel="noopener">
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="pen-line"></i></div>
+        <div>
+          <strong>Medium</strong>
+          <p>sanugiw.medium.com</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Sanugi Dilara Wickramasinghe
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+
+  // Reveal-on-scroll — safe fallback so content never disappears
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const els = document.querySelectorAll('.fade-up');
+
+  function revealAll() { els.forEach(el => el.classList.add('reveal-in')); }
+
+  if (prefersReduced) {
+    revealAll();
+  } else if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(el => io.observe(el));
+  } else {
+    revealAll();
+  }
+</script>
+
+</body>
+</html>
 
