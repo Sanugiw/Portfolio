@@ -38,7 +38,6 @@ body{
 }
 
 img{ max-width:100%; display:block; }
-ul{ list-style: disc; }
 strong{ font-weight: 750; }
 
 /* ===== Links ===== */
@@ -178,10 +177,21 @@ section{
 }
 section h2{
   font-size: 1.85rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.1rem;
   font-weight: 750;
   letter-spacing: -0.01em;
   color: #cfe1ff;
+  position: relative;
+}
+section h2::after{
+  content:"";
+  display:block;
+  width: 52px;
+  height: 2px;
+  margin-top: .55rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(59,130,246,.55), rgba(34,211,238,.55));
+  opacity: .65;
 }
 .subtle{
   color: var(--text-dim);
@@ -195,6 +205,12 @@ section h2{
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.6rem;
   align-items:start;
+}
+
+/* Better alignment inside cards when using nested .two-col */
+.card .two-col{
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
 }
 
 /* ===== Grid / Cards ===== */
@@ -243,15 +259,15 @@ section h2{
 .card h3{
   color: #eaf0fb;
   font-size: 1.12rem;
-  margin-bottom: .35rem;
+  margin-bottom: .5rem;
 }
 .desc{
   color: var(--text-dim);
   font-size: .95rem;
-  margin-top: .45rem;
+  margin-top: .35rem;
 }
 .meta{
-  margin-top: .8rem;
+  margin-top: .95rem;
   display:flex;
   flex-wrap:wrap;
   gap:.5rem;
@@ -265,13 +281,29 @@ section h2{
   border-radius: 999px;
 }
 
-/* ===== Lists ===== */
+/* ===== Lists (cleaner, more “designed”) ===== */
 .bullets{
-  margin-top: .7rem;
-  padding-left: 1.05rem;
+  margin-top: .75rem;
+  padding-left: 0;
+  list-style: none;
   color: var(--text-dim);
 }
-.bullets li{ margin: .28rem 0; }
+.bullets li{
+  margin: .35rem 0;
+  padding-left: 1.05rem;
+  position: relative;
+}
+.bullets li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.62em;
+  width:6px;
+  height:6px;
+  border-radius:999px;
+  background: rgba(34,211,238,.75);
+  opacity:.75;
+}
 .bullets.compact{ margin-top: .65rem; }
 
 /* ===== Mini headings inside cards (Technical / Soft Skills) ===== */
@@ -452,3 +484,6 @@ a:focus-visible, button:focus-visible{
   nav{ flex-wrap:wrap; }
   .grid{ grid-template-columns: 1fr; }
 }
+
+
+
