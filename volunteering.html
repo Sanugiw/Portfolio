@@ -17,12 +17,22 @@
 <header>
   <h1>Volunteering</h1>
 
+  <p class="tagline" style="max-width:780px;">
+    Committee roles, leadership positions, and community contributions across IEEE and university organizations.
+  </p>
+
   <div class="header-cta">
     <a class="btn cv" href="assets/Sanugi_Dilara_Wickramasinghe_CV.pdf" download>Download CV</a>
     <a class="btn" href="index.html">Back to Home</a>
     <a class="btn" href="projects.html">Projects</a>
     <a class="btn" href="honors.html">Honors & Awards</a>
     <a class="btn primary" href="#contact">Contact</a>
+  </div>
+
+  <div class="pill" aria-label="Jump links" style="margin-top:1.25rem;">
+    <a class="btn" href="#ieee" style="padding:.45rem .85rem;">IEEE</a>
+    <a class="btn" href="#other" style="padding:.45rem .85rem;">Other</a>
+    <a class="btn" href="#contact" style="padding:.45rem .85rem;">Contact</a>
   </div>
 </header>
 
@@ -36,10 +46,13 @@
 
 <main>
 
-  <section class="fade-up">
+  <!-- IEEE -->
+  <section id="ieee" class="fade-up">
+    <h2>IEEE Experience</h2>
+    <p class="subtle">Roles across IEEE student branches, societies, and national initiatives.</p>
 
-    <div class="grid" style="margin-top:1.6rem;">
-
+    <!-- Featured (full width) -->
+    <div class="grid" style="grid-template-columns: 1fr; margin-top:1.6rem;">
       <div class="card fade-up">
         <h3>IEEE Student Branch UoM</h3>
         <ul class="bullets compact">
@@ -56,43 +69,11 @@
           <span class="tag">Events</span>
         </div>
       </div>
+    </div>
 
-      <div class="card fade-up">
-        <h3>IEEE Sri Lanka Section</h3>
-        <ul class="bullets compact">
-          <li><strong>ICPC Sri Lanka 2025/26</strong> · Editorial Committe Member</li>
-        </ul>
-        <div class="meta">
-          <span class="tag">Secretariat</span>
-          <span class="tag">Operations</span>
-          <span class="tag">Teamwork</span>
-        </div>
-      </div>
+    <!-- Rest of IEEE grid -->
+    <div class="grid" style="margin-top:1.6rem;">
 
-      <div class="card fade-up">
-        <h3>IEEE EMBS Sri Lanka Section</h3>
-        <ul class="bullets compact">
-          <li><strong>AXON 2025</strong> · Secretariat Team Member</li>
-        </ul>
-        <div class="meta">
-          <span class="tag">Secretariat</span>
-          <span class="tag">Operations</span>
-          <span class="tag">Teamwork</span>
-        </div>
-      </div>
-      
-      <div class="card fade-up">
-        <h3>IEEE SL Inspire</h3>
-        <ul class="bullets compact">
-          <li><strong>Career Compass</strong> · Career Guidance Sessions Speaker</li>
-        </ul>
-        <div class="meta">
-          <span class="tag">Speaking</span>
-          <span class="tag">Mentoring</span>
-          <span class="tag">Communication</span>
-        </div>
-      </div>
-      
       <div class="card fade-up">
         <h3>IEEE EMBS UoM</h3>
         <ul class="bullets compact">
@@ -108,6 +89,30 @@
       </div>
 
       <div class="card fade-up">
+        <h3>IEEE SL Inspire</h3>
+        <ul class="bullets compact">
+          <li><strong>Career Compass</strong> · Career Guidance Sessions Speaker</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Speaking</span>
+          <span class="tag">Mentoring</span>
+          <span class="tag">Communication</span>
+        </div>
+      </div>
+
+      <div class="card fade-up">
+        <h3>IEEE EMBS Sri Lanka Section</h3>
+        <ul class="bullets compact">
+          <li><strong>AXON 2025</strong> · Secretariat Team Member</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Secretariat</span>
+          <span class="tag">Operations</span>
+          <span class="tag">Teamwork</span>
+        </div>
+      </div>
+
+      <div class="card fade-up">
         <h3>IEEE RAS UoM</h3>
         <ul class="bullets compact">
           <li><strong>NextGen 1.0</strong> · Program & Logistics Committee Member</li>
@@ -119,7 +124,28 @@
         </div>
       </div>
 
-      
+      <div class="card fade-up">
+        <h3>IEEE Sri Lanka Section</h3>
+        <ul class="bullets compact">
+          <li><strong>ICPC Sri Lanka 2025/26</strong> · Editorial Committee Member</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">Editorial</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Teamwork</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Other -->
+  <section id="other" class="fade-up">
+    <h2>Other Experience</h2>
+    <p class="subtle">University clubs and societies.</p>
+
+    <div class="grid" style="margin-top:1.6rem;">
+
       <div class="card fade-up">
         <h3>Electronic Club UoM</h3>
         <ul class="bullets compact">
@@ -215,7 +241,6 @@
 <script>
   lucide.createIcons();
 
-  // Reveal-on-scroll — safe fallback so content never disappears
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const els = document.querySelectorAll('.fade-up');
 
@@ -241,5 +266,4 @@
 
 </body>
 </html>
-
 
