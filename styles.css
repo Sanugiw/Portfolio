@@ -522,5 +522,13 @@ a:focus-visible, button:focus-visible{
   .grid{ grid-template-columns: 1fr; }
 }
 
+/* Volunteering page: tighter subheadings inside cards */
+.card .mini-title{
+  margin-bottom: .35rem;
+  opacity: .95;
+}
+.card .mini-title + .bullets{
+  margin-top: .55rem;
+}
 
 
