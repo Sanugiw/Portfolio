@@ -10,16 +10,87 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Small page-only helpers (safe even if you keep them here) */
+    .page-intro{
+      margin-top:.9rem;
+      color: var(--text-dim);
+      max-width: 860px;
+      margin-inline:auto;
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+
+    .project-card .kicker{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      align-items:baseline;
+      margin-bottom:.35rem;
+    }
+    .project-card .kicker strong{
+      font-size:1.1rem;
+      letter-spacing:-0.01em;
+      color: var(--text);
+    }
+    .project-card .kicker .sub{
+      color: var(--text-dim);
+      font-weight:600;
+      font-size:.95rem;
+    }
+
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      padding:.22rem .55rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.02);
+      color: var(--text-dim);
+      font-size:.78rem;
+      font-weight:700;
+      letter-spacing:-0.01em;
+    }
+
+    .project-meta{
+      margin-top:.85rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+    }
+
+    .featured-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.6rem;
+      margin-top: 1.2rem;
+    }
+    @media (max-width: 900px){
+      .featured-grid{ grid-template-columns: 1fr; }
+    }
+
+    .section-lead{
+      color: var(--text-dim);
+      max-width: 900px;
+      margin-top: .2rem;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
   <h1>Projects</h1>
+  <p class="page-intro">
+    Selected work across biomedical instrumentation, embedded systems, and machine learning for healthcare.
+    For details and code, open a project.
+  </p>
+
   <div class="header-cta">
     <a class="btn cv" href="assets/Sanugi_Dilara_Wickramasinghe_CV.pdf" download>Download CV</a>
     <a class="btn" href="index.html">Back to Home</a>
-    <a class="btn" href="honors.html">Honors & Awards</a>
+    <a class="btn" href="honors.html">Honors</a>
     <a class="btn" href="volunteering.html">Volunteering</a>
     <a class="btn primary" href="#contact">Contact</a>
   </div>
@@ -34,9 +105,58 @@
 </nav>
 
 <main>
-  <section>
-    <h2>Featured Projects</h2>
-    
+  <section class="fade-up">
+    <h2>Featured</h2>
+    <p class="section-lead">
+      Projects that best represent my focus areas and end-to-end engineering work.
+    </p>
+
+    <div class="featured-grid">
+
+      <a href="https://github.com/Sanugiw/X-Hale" target="_blank" rel="noopener"
+         class="card fade-up project-card" data-cat="biomed embedded">
+        <div class="kicker">
+          <strong>X-Hale</strong>
+          <span class="sub">Portable Spirometer</span>
+          <span class="chip">Team</span>
+        </div>
+
+        <p class="desc">
+          Airflow-velocity-based respiratory monitoring with on-device lung metrics and real-time mobile visualization.
+        </p>
+
+        <div class="project-meta">
+          <span class="tag">Medical Instrumentation</span>
+          <span class="tag">Embedded</span>
+          <span class="tag">Mobile App</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Sanugiw/Table-Mounted-fundoscope" target="_blank" rel="noopener"
+         class="card fade-up project-card" data-cat="biomed ml">
+        <div class="kicker">
+          <strong>Table-Mounted Fundoscope</strong>
+          <span class="sub">ML-Assisted Retinal Imaging</span>
+          <span class="chip">Team</span>
+        </div>
+
+        <p class="desc">
+          Stable retinal imaging workflow with wireless transfer and ML-assisted diabetic retinopathy screening support.
+        </p>
+
+        <div class="project-meta">
+          <span class="tag">Medical Imaging</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Workflow Design</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="fade-up">
+    <h2>All Projects</h2>
+
     <div class="filters" role="tablist" aria-label="Project filters">
       <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
       <button class="filter-btn" data-filter="biomed" role="tab">Biomedical Instrumentation</button>
@@ -47,54 +167,43 @@
 
     <div class="grid project-grid" style="margin-top:1.6rem;">
 
-      <a href="https://github.com/Sanugiw/X-Hale" target="_blank" rel="noopener"
-         class="card fade-up project-card" data-cat="biomed embedded">
-        <div class="kicker"><strong>X-Hale:</strong><span> Portable Spirometer</span><span class="tag" style="margin-left:.35rem;">Team</span></div>
-        <p class="desc"> Airflow-velocity-based respiratory monitoring with on-device lung metrics and real-time mobile visualization. </p></p>
-        <div class="meta">
-          <span class="tag">Medical Instrumentation</span>
-          <span class="tag">Embedded Devices</span>
-          <span class="tag">Mobile App Development</span>
-        </div>
-      </a>
-
-      <a href="https://github.com/Sanugiw/Table-Mounted-fundoscope" target="_blank" rel="noopener"
-         class="card fade-up project-card" data-cat="biomed ml">
-        <div class="kicker"><strong>Table-Mounted Fundoscope:</strong><span> ML-Assisted Retinal Imaging</span><span class="tag" style="margin-left:.35rem;">Team</span></div>
-        <p class="desc">Stable retinal imaging workflow with wireless transfer and ML-assisted diabetic retinopathy screening support.</p>
-        <div class="meta">
-          <span class="tag">Medical Imaging</span>
-          <span class="tag">Machine Learning</span>
-        </div>
-      </a>
-
       <a href="https://github.com/Sanugiw/Dual-Mode-Thermometer" target="_blank" rel="noopener"
          class="card fade-up project-card" data-cat="biomed hardware">
-        <div class="kicker"><strong>Dual-Mode Thermometer:</strong><span> Analog Measurement System</span><span class="tag" style="margin-left:.35rem;">Team</span><</div>
+        <div class="kicker">
+          <strong>Dual-Mode Thermometer</strong>
+          <span class="sub">Analog Measurement System</span>
+          <span class="chip">Team</span>
+        </div>
         <p class="desc">Precision analog temperature measurement with mode switching and OLED readout.</p>
-        <div class="meta">
+        <div class="project-meta">
           <span class="tag">Circuit Design</span>
-          <span class="tag">Eclosure Design</span>
+          <span class="tag">Enclosure</span>
           <span class="tag">Prototyping</span>
         </div>
       </a>
 
       <a href="https://github.com/Sanugiw/Medi-Box" target="_blank" rel="noopener"
          class="card fade-up project-card" data-cat="embedded biomed">
-        <div class="kicker"><strong>Medi-Box:</strong><span> Smart Medicine Reminder</span></div>
-        <p class="desc">Medicine take reminder and storage monitoring system with environmental sensing and configurable alerts.</p>
-        <div class="meta">
+        <div class="kicker">
+          <strong>Medi-Box</strong>
+          <span class="sub">Smart Medicine Reminder</span>
+        </div>
+        <p class="desc">Medicine reminder and storage monitoring with environmental sensing and configurable alerts.</p>
+        <div class="project-meta">
           <span class="tag">ESP32</span>
-          <span class="tag">Node.js</span>
           <span class="tag">MQTT</span>
+          <span class="tag">Dashboard</span>
         </div>
       </a>
 
       <a href="https://github.com/Sanugiw/Trash-Classifier" target="_blank" rel="noopener"
          class="card fade-up project-card" data-cat="ml embedded">
-        <div class="kicker"><strong>Trash Classifier:</strong><span> Vision Prototype</span></div>
-        <p class="desc">On-device vision inference with simple web UI for recyclable classification.</p>
-        <div class="meta">
+        <div class="kicker">
+          <strong>Trash Classifier</strong>
+          <span class="sub">Vision Prototype</span>
+        </div>
+        <p class="desc">On-device vision inference with a simple web interface for recyclable classification.</p>
+        <div class="project-meta">
           <span class="tag">Machine Vision</span>
           <span class="tag">OpenCV</span>
           <span class="tag">Flask</span>
@@ -103,21 +212,30 @@
 
       <a href="https://github.com/Sanugiw/Handheld-RFID-Reader" target="_blank" rel="noopener"
          class="card fade-up project-card" data-cat="embedded hardware">
-        <div class="kicker"><strong>HF RFID Reader:</strong><span> Handheld System</span><span class="tag" style="margin-left:.35rem;">Team</span><</div>
-        <p class="desc">Wireless sync handheld RFID system with mobile/web logging interfaces.</p>
-        <div class="meta">
-          <span class="tag">Embedded Devices</span>
+        <div class="kicker">
+          <strong>Handheld RFID Reader</strong>
+          <span class="sub">Wireless Logging System</span>
+          <span class="chip">Team</span>
+        </div>
+        <p class="desc">Wireless handheld RFID system with mobile/web logging interfaces.</p>
+        <div class="project-meta">
+          <span class="tag">Embedded</span>
           <span class="tag">Firmware</span>
+          <span class="tag">Bluetooth</span>
         </div>
       </a>
 
       <a href="https://github.com/Sanugiw/PPG-Arrhythmia-Detection" target="_blank" rel="noopener"
          class="card fade-up project-card" data-cat="ml">
-        <div class="kicker"><strong>PPG Arrhythmia Classifier</strong></div>
+        <div class="kicker">
+          <strong>PPG Arrhythmia Classifier</strong>
+          <span class="sub">Signal + Deep Learning Pipeline</span>
+        </div>
         <p class="desc">End-to-end pipeline for PPG preprocessing and deep learning classification.</p>
-        <div class="meta">
+        <div class="project-meta">
           <span class="tag">Biosignal Processing</span>
           <span class="tag">Deep Learning</span>
+          <span class="tag">Evaluation</span>
         </div>
       </a>
 
@@ -125,27 +243,27 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" class="fade-up">
     <h2>Contact</h2>
     <div class="contact-grid">
 
       <a class="contact-box" href="mailto:sanugidwickramasinghe@gmail.com">
-        <div class="contact-icon"><i data-lucide="mail"></i></div>
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="mail"></i></div>
         <div><strong>Email</strong><p>sanugidwickramasinghe@gmail.com</p></div>
       </a>
 
       <a class="contact-box" href="https://github.com/Sanugiw" target="_blank" rel="noopener">
-        <div class="contact-icon"><i data-lucide="github"></i></div>
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="github"></i></div>
         <div><strong>GitHub</strong><p>github.com/Sanugiw</p></div>
       </a>
 
       <a class="contact-box" href="https://linkedin.com/in/sanugiwickramasinghe" target="_blank" rel="noopener">
-        <div class="contact-icon"><i data-lucide="linkedin"></i></div>
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="linkedin"></i></div>
         <div><strong>LinkedIn</strong><p>linkedin.com/in/sanugiwickramasinghe</p></div>
       </a>
 
       <a class="contact-box" href="https://sanugiw.medium.com/" target="_blank" rel="noopener">
-        <div class="contact-icon"><i data-lucide="pen-line"></i></div>
+        <div class="contact-icon" aria-hidden="true"><i data-lucide="pen-line"></i></div>
         <div><strong>Medium</strong><p>sanugiw.medium.com</p></div>
       </a>
 
@@ -157,7 +275,6 @@
   © 2026 Sanugi Dilara Wickramasinghe
 </footer>
 
-<!-- Scripts -->
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
   lucide.createIcons();
@@ -187,9 +304,10 @@
     btn.addEventListener('click',()=>{
       filterBtns.forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
+
       const f = btn.dataset.filter;
       cards.forEach(c=>{
-        c.style.display = (f==='all'||c.dataset.cat.includes(f)) ? '' : 'none';
+        c.style.display = (f==='all' || c.dataset.cat.includes(f)) ? '' : 'none';
       });
     });
   });
