@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Honors & Awards | Sanugi Dilara Wickramasinghe</title>
-  <meta name="description" content="Honors & awards of Sanugi Dilara Wickramasinghe" />
+  <meta name="description" content="Honors and awards of Sanugi Dilara Wickramasinghe" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,6 +16,10 @@
 
 <header>
   <h1>Honors & Awards</h1>
+  <p class="page-intro">
+    A snapshot of academic performance and recognition through leadership and volunteering.
+  </p>
+
   <div class="header-cta">
     <a class="btn cv" href="assets/Sanugi_Dilara_Wickramasinghe_CV.pdf" download>Download CV</a>
     <a class="btn" href="index.html">Back to Home</a>
@@ -28,43 +32,86 @@
 <nav>
   <a href="index.html">Home</a>
   <a href="projects.html">Projects</a>
-  <a class="active" href="honors.html">Honors and Awards</a>
-  <a class="active" href="volunteering.html">Volunteering</a>
+  <a class="active" href="honors.html">Honors</a>
+  <a href="volunteering.html">Volunteering</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <main>
+
+  <!-- Academic -->
   <section class="fade-up">
-    <div style="margin-top:1.6rem;">
-      <div class="honor-item fade-up">
-        <h4>Dean’s List – Faculty of Engineering, University of Moratuwa</h4>
-        <div class="when">Semesters 1, 2, 3,4</div>
+    <h2>Academic</h2>
+
+    <div class="grid" style="margin-top:1.2rem;">
+      <div class="card fade-up">
+        <h3>Dean’s List</h3>
+        <p class="desc">Faculty of Engineering, University of Moratuwa</p>
+        <div class="meta">
+          <span class="tag">Semesters 1–4</span>
+          <span class="tag">Academic Excellence</span>
+        </div>
       </div>
 
-      <div class="honor-item fade-up">
-        <h4>GCE Advanced Level – Academic Achievement</h4>
-        <div class="when">2022</div>
-        <p class="subtle">3 As for Combined Mathematics, Physics, and Chemistry- Z score of 2.5903</p>
+      <div class="card fade-up">
+        <h3>GCE Advanced Level</h3>
+        <p class="desc">2022</p>
+        <ul class="bullets compact">
+          <li><strong>3 A’s</strong> in Combined Mathematics, Physics, and Chemistry</li>
+          <li><strong>Z-score:</strong> 2.5903</li>
+        </ul>
+        <div class="meta">
+          <span class="tag">A/L</span>
+          <span class="tag">STEM</span>
+        </div>
       </div>
 
-      <div class="honor-item fade-up">
-        <h4>GCE Ordinary Level – Academic Achievement</h4>
-        <div class="when">2018</div>
-        <p class="subtle">9 A’s</p>
-      </div>
-
-      <div class="honor-item fade-up">
-        <h4>Best Performing Matching Panelist – AIESEC in Colombo South - April 2023</h4>
-        <div class="when">2023</div>
-      </div>
-
-      <div class="honor-item fade-up">
-        <h4>Team Leader – Most Impactful iGV Project of AIESEC in Colombo South - Winter 23.24</h4>
-        <div class="when">2023</div>
+      <div class="card fade-up">
+        <h3>GCE Ordinary Level</h3>
+        <p class="desc">2018</p>
+        <ul class="bullets compact">
+          <li><strong>9 A’s</strong></li>
+        </ul>
+        <div class="meta">
+          <span class="tag">O/L</span>
+          <span class="tag">Academic</span>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Leadership & Recognition -->
+  <section class="fade-up">
+    <h2>Leadership & Recognition</h2>
+
+    <div class="grid" style="margin-top:1.2rem;">
+      <div class="card fade-up">
+        <h3>AIESEC Recognition</h3>
+        <ul class="bullets compact">
+          <li><strong>Best Performing Matching Panelist</strong></li>
+        </ul>
+        <p class="desc">AIESEC in Colombo South · 2023</p>
+        <div class="meta">
+          <span class="tag">Evaluation</span>
+          <span class="tag">Communication</span>
+        </div>
+      </div>
+
+      <div class="card fade-up">
+        <h3>Project Impact Award</h3>
+        <ul class="bullets compact">
+          <li><strong>Team Leader</strong> – Most Impactful iGV Project</li>
+        </ul>
+        <p class="desc">AIESEC in Colombo South · Winter 23/24</p>
+        <div class="meta">
+          <span class="tag">Leadership</span>
+          <span class="tag">Delivery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
   <section id="contact" class="fade-up">
     <h2>Contact</h2>
     <div class="contact-grid">
@@ -91,6 +138,7 @@
 
     </div>
   </section>
+
 </main>
 
 <footer>
@@ -101,7 +149,6 @@
 <script>
   lucide.createIcons();
 
-  // Reveal-on-scroll — safe fallback so content never disappears
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const els = document.querySelectorAll('.fade-up');
 
@@ -127,4 +174,3 @@
 
 </body>
 </html>
-
