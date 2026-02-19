@@ -531,4 +531,11 @@ a:focus-visible, button:focus-visible{
   margin-top: .55rem;
 }
 
+.page-intro{
+  margin-top:.9rem;
+  color: var(--text-dim);
+  max-width: 860px;
+  margin-inline:auto;
+  font-size: 1.02rem;
+}
 
